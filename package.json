@@ -4,6 +4,7 @@
   "description": "SignUp NodeJS server",
   "main": "index.js",
   "scripts": {
+    "start": "cross-env PORT=3000 nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,5 +12,15 @@
     "url": ".git"
   },
   "author": "MaxCharlington",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "pg-promise": "^8.5.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
 }
