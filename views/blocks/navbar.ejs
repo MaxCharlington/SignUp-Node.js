@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+	<div class="container">
+		<a class="navbar-brand" href="/">SignUp</a>
+		<a class="account" href="/login">
+			Аккаунт
+		</a>
+	</div>
+</nav>
+<script type="text/javascript">
+	var prevScroll = 0; 
+	var currScroll;
+	var isOpening = true;
+
+	function scrollFunction() {
+		let nav = document.getElementsByClassName("navbar")[0];
+		currScroll = document.documentElement.scrollTop;
+		if (prevScroll - currScroll < 0) {
+			if (isOpening) {
+				nav.classList.remove("open"); 
+				nav.className += " " + "close";
+				setTimeout(()=>{nav.style.top = "-60px";}, 300);
+				isOpening = false;
+			}
+		} else {
+			if (!isOpening) {
+				nav.classList.remove("close");
+				nav.className += " " + "open";
+				setTimeout(()=>{nav.style.top = "0px";}, 300);
+				isOpening = true;
+			}
+		}
+		prevScroll = currScroll;
+	}
+	window.onscroll = () => scrollFunction();
+</script>

@@ -1,0 +1,133 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.w-95 {
+  width: 95%;
+}
+
+.navbar {
+  top: 0px; 
+  transition: top 2s;
+}
+
+.navbar.open {
+  -webkit-animation-name: open; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+  animation-name: open;
+  animation-duration: 0.3s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes open {
+  0%   {top: -60px;}
+  25%  {top: -40px;}
+  50%  {top: -20px;}
+  100% {top: 0px;}
+}
+
+@keyframes open {
+  0%   {top: -60px;}
+  25%  {top: -40px;}
+  50%  {top: -20px;}
+  100% {top: 0px;}
+}
+
+.navbar.close {
+  -webkit-animation-name: close; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+  animation-name: close;
+  animation-duration: 0.3s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes close {
+  0%   {top: 0px;}
+  25%  {top: -20px;}
+  50%  {top: -40px;}
+  100% {top: -60px;}
+}
+
+@keyframes close {
+  0%   {top: 0px;}
+  25%  {top: -20px;}
+  50%  {top: -40px;}
+  100% {top: -60px;}
+}
+
+header {
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  height: 100vh;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background: rgb(0,23,51);
+  background: -moz-linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
+  background: -webkit-linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
+  background: linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001733",endColorstr="#00dcff",GradientType=1);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+header.masthead .mx-auto{
+  padding-bottom: 2vh;
+}
+
+.form-control {
+  border: 2px solid #80bdff;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+#login, #registration {
+  color: #495057;
+  background-color: #fff;
+  padding: .4rem 1rem;
+  border-radius: .3rem;  
+  border: 2px solid #80bdff;
+  transition: .3s;
+}
+
+#login:hover, #registration:hover{
+  color: #fff;
+  background-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+footer.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
