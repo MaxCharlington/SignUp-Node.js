@@ -2,11 +2,12 @@
 	<div class="container">
 		<a class="navbar-brand" href="/">SignUp</a>
 		<a class="account" href="/login">
-			Аккаунт
+			<%= username != '' ? username : 'Аккаунт' %>
 		</a>
 	</div>
 </nav>
 
+<!--
 <script type="text/javascript">
 	var prevScroll = 0; 
 	var currScroll;
@@ -36,3 +37,4 @@
 
 	window.onscroll = () => scrollFunction();
 </script>
+-->

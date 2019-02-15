@@ -22,7 +22,7 @@
     <!-- Navigation -->
     <% include blocks/navbar.ejs %>
 
-    <!-- Masthead -->
+    <!-- Content -->
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
       <div class="container d-flex h-100 align-items-center justify-content-center">
@@ -31,19 +31,19 @@
             <h1 class="mb-3">Регистрация</h1>
           </div>
           <div class="col-12 col-md-8 mx-auto">
-            <form>
+            <form method="POST">
               <div class="form-row">
                 <div class="col-12 mb-2">
-                  <input id="phonenumber" type="text" class="form-control form-control-lg" placeholder="Телефон">
+                  <input name="phonenumber" id="phonenumber" type="text" class="form-control form-control-lg" placeholder="Телефон">
                 </div>
                 <div class="col-12 mb-2">
-                  <input id="login" type="text" class="form-control form-control-lg" placeholder="Логин">
+                  <input name="username" id="username" type="text" class="form-control form-control-lg" placeholder="Имя пользователя">
                 </div>
                 <div class="col-12 mb-4">
-                  <input id="password" type="text" class="form-control form-control-lg" placeholder="Пароль">
+                  <input name="password" id="password" type="text" class="form-control form-control-lg" placeholder="Пароль">
                 </div>                
                 <div class="col-12 mb-2">
-                  <button id="registrate" type="button" class="form-control form-control-lg" onclick="Registrate();">Зарегистрироваться</button>
+                  <input id="registrate" type="submit" class="form-control form-control-lg" value="Зарегистрироваться" />
                 </div>
               </div>
             </form>

@@ -70,6 +70,16 @@ a:hover, a:visited, a:link, a:active
   100% {top: -60px;}
 }
 
+.account {
+  color: #495057;
+  background-color: #fff;
+  padding: .4rem 1rem;
+  border-radius: .3rem;  
+  border: 2px solid #80bdff;
+  transition: .3s;
+  position: relative;
+}
+
 header {
   padding-top: 7em;
   padding-bottom: 5em;
