@@ -1,9 +1,26 @@
 <nav class="navbar navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="/">SignUp</a>
-		<a class="account" href="/login">
-			<%= username != '' ? username : 'Аккаунт' %>
-		</a>
+		<div class="account">
+			<%
+				var userName = (typeof username != 'undefined' ? (username != '' ? username : 'Аккаунт') : 'Аккаунт'); 
+				var links = (userName == 'Аккаунт' ? 
+						[{txt:'Войти', link: '/login'}, {txt:'Зарегистрироваться', link: '/registration'}] 
+					: 
+						[{txt:'Записи', link: '#'},{txt:'Профиль', link: '#'},{txt:'Выйти', link: '#'}]
+				);
+			%>
+			<span class="account-name">
+				<%= userName %>
+			</span>
+			<div class="account-menu">
+				<img src="public/img/user.png"/>
+				<h3><%= userName %></h3>
+				<% links.forEach((elem)=>{ %>					
+					<a href='<%= elem.link %>'><%= elem.txt %></a>
+				<%})%>
+			</div>			
+		</div>
 	</div>
 </nav>
 

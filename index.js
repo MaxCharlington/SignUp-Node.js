@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use('/public', express.static('public'));
 
+
 // set a cookie
 app.use(function (req, res, next) {
   // check if client sent cookie
