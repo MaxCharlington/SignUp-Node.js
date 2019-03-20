@@ -9,7 +9,6 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Custom styles -->
     <link href="public/css/index-page.css" rel="stylesheet">
@@ -36,10 +35,10 @@
             <h1 class="mb-3">Найдите с нами, где вам сделают хорошо!</h1>
           </div>
           <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form>
+            <form id="search-form" method="POST">
               <div class="form-row">
                 <div class="col-12 mb-2 mb-md-0">
-                  <input id="searchbar" type="text" class="form-control form-control-lg" placeholder="Что искать?" oninput="onSearch()">
+                  <input id="searchbar" name="searchbar" type="text" class="form-control form-control-lg" placeholder="Что искать?" oninput="onSearch()">
                   <div id="results" class="w-95"></div>
                 </div>
               </div>
@@ -62,7 +61,7 @@
                 <img src="public/img/express.png" class="fast m-auto text-primary"/>
               </div>
               <h3>Быстро</h3>
-              <p class="lead mb-0">Наш сервис позволит Вам найти то, что вы хотите максимально быстро</p>
+              <p class="lead mb-0">Наш сервис позволит Вам найти то, что Вы хотите максимально быстро</p>
             </div>
           </div>
           <div class="col-md-4 align-middle">

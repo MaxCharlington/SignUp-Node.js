@@ -1,14 +1,12 @@
 class Request {
-  constructor(cmdId, StrData, IntData) {    
-    this.cmdId = cmdId;
-    this.StrData = StrData;
-    this.IntData = IntData;
+  constructor() {
   }
-}
-
-class Search {
-  constructor(txt) {
-    this.Input = txt;
+  response() {
+    var req = new XMLHttpRequest();
+    req.open("POST", "", false);
+    req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    req.send(`search=${document.getElementById('searchbar').value}`);
+    return req.responseText;
   }
 }
 
@@ -46,7 +44,6 @@ function ServerResponseAsyncTo(request, onRespond) {
         }
     };
 }
-
 
 
 /*Dinamic colors

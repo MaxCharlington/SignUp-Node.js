@@ -1,15 +1,26 @@
 function onSearch() {
-  var search = new Search(document.getElementById("searchbar").value);
-  //var request = new Request(0, JSON.stringify(search), 0)
+  var masthead = document.getElementsByClassName("masthead")[0];
+  var request = new Request();
   var results = document.getElementById("results");
   var aside = document.getElementsByTagName("aside")[0];
+  var h = document.getElementsByTagName("h1")[0];
+
+  //reset
   results.innerHTML = "";
-  results.style.display = "none";
-  aside.style.display = "block";
-  var responseText = search.Input;//TMP
-  
+  results.style = h.style = aside.style = "null";  
+  var responseText = request.response();
+
+  var form = document.getElementById('searchbar');
+  form.setAttribute("type", 'post');
+
+  //filling and style changing
   if (responseText != "") {
-    aside.style.display = "none";
+    if (masthead.clientHeight < (document.getElementById("searchbar").clientHeight + 280 + h.clientHeight + aside.clientHeight)) {
+      h.style.visibility = "hidden";
+      h.style.fontSize = "40px";
+      h.style.transform = "transform: scale(2, 1);"; /* W3C */
+      aside.style.display = "none";
+    }
     results.style.display = "block";
     var elem = document.createElement("span");        
     elem.innerText = "Результаты:";

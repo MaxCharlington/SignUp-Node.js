@@ -45,6 +45,20 @@ app.get('/', function (req, res) {
   res.render('index', req.cookies);
 });
 
+app.post('/', function (req, res) {
+  if (req.body) {
+    if (req.body.search) {      
+      res.send(req.body.search); //TMP
+    } 
+    else if (req.body.searchbar){
+      res.render('search', req.cookies);
+    }
+    else {
+      res.send('');
+    }
+  }
+});
+
 
 //Registration Page
 app.get('/registration', function (req, res) {

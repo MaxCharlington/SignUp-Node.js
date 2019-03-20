@@ -1,76 +1,6 @@
-$border-color: #80bdff;
-
-body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
-}
-
-a:hover, a:visited, a:link, a:active
-{
-    text-decoration: none;
-}
-
-.w-95 {
-  width: 95%;
-}
-
-.navbar {
-  top: 0px; 
-  transition: top 2s;
-}
-
-.navbar.open {
-  -webkit-animation-name: open; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-  animation-name: open;
-  animation-duration: 0.3s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes open {
-  0%   {top: -60px;}
-  25%  {top: -40px;}
-  50%  {top: -20px;}
-  100% {top: 0px;}
-}
-
-@keyframes open {
-  0%   {top: -60px;}
-  25%  {top: -40px;}
-  50%  {top: -20px;}
-  100% {top: 0px;}
-}
-
-.navbar.close {
-  -webkit-animation-name: close; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
-  animation-name: close;
-  animation-duration: 0.3s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes close {
-  0%   {top: 0px;}
-  25%  {top: -20px;}
-  50%  {top: -40px;}
-  100% {top: -60px;}
-}
-
-@keyframes close {
-  0%   {top: 0px;}
-  25%  {top: -20px;}
-  50%  {top: -40px;}
-  100% {top: -60px;}
-}
+@import "consts.scss";
+@import "colors.scss";
+@import "navbar.scss";
 
 header {
   padding-top: 7em;
@@ -86,10 +16,7 @@ header.masthead {
 header.masthead .overlay {
   position: absolute;
   background: rgb(0,23,51);
-  background: -moz-linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
-  background: -webkit-linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
   background: linear-gradient(308deg, rgba(0,23,51,1) 0%, rgba(49,83,116,1) 19%, rgba(0,220,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001733",endColorstr="#00dcff",GradientType=1);
   height: 100%;
   width: 100%;
   top: 0;
@@ -129,7 +56,7 @@ header.masthead .mx-auto{
   font-size: 1.25rem;
 }
 
-.account, .result, .account-menu, .account-menu a{
+.result {
   color: #495057;
   background-color: #fff;
   padding: .4rem 1rem;
@@ -138,56 +65,17 @@ header.masthead .mx-auto{
   transition: .3s;
 }
 
-.account {
-  position: relative;
-}
-
-.account:hover .account-menu {
-  display: block;
-}
-
-.account-menu {
-  display: none;
-  position: absolute;
-  margin-top: 9px;
-  right: 0;
-  z-index: 1;  
-  width: 300px;
-  max-width: 85vw;  
-  padding-bottom: 1rem;
-}
-
-.account-menu a {
-  display: block;
-  margin-top: 0.5rem;
-  width: 100%;
-}
-
-.account-menu img {
-  padding: 5%;
-  width: 35%;
-  margin: 0.5rem;
-  border-radius: 50%;  
-  border: 2px solid #80bdff;
-}
-
-.account-menu h3 {
-  color: #495057;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
 .result {
   margin-top: 0.5rem;
 }
 
-.result:hover, .account:hover, .account-menu a:hover{
+.result:hover {
   color: #fff;
   background-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
 }
 
-.result:active, .account:active {
+.result:active {
   color: #fff;
   background-color: #007bff;
   box-shadow: none;

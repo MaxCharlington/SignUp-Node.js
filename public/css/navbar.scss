@@ -1,0 +1,65 @@
+@import "colors.scss";
+
+.navbar {
+    
+}
+
+.account, .account-menu, .account-menu a{
+  color: #495057;
+  background-color: #fff;
+  padding: .4rem 1rem;
+  border-radius: .3rem;  
+  border: 2px solid #80bdff;
+  transition: .3s;
+}
+
+.account {
+  position: relative;
+}
+
+.account:hover .account-menu {
+  display: block;
+}
+
+.account-menu {
+  display: none;
+  position: absolute;
+  margin-top: 9px;
+  right: 0;
+  z-index: 1;  
+  width: 300px;
+  max-width: 85vw;  
+  padding-bottom: 1rem;
+}
+
+.account-menu a {
+  display: block;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.account-menu img {
+  padding: 5%;
+  width: 35%;
+  margin: 0.5rem;
+  border-radius: 50%;  
+  border: 2px solid #80bdff;
+}
+
+.account-menu h3 {
+  color: #495057;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.account:hover, .account-menu a:hover{
+  color: #fff;
+  background-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.account:active {
+  color: #fff;
+  background-color: #007bff;
+  box-shadow: none;
+}

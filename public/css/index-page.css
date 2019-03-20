@@ -20,149 +20,7 @@ a:hover, a:visited, a:link, a:active {
   width: 95%;
 }
 
-.navbar {
-  top: 0px;
-  -webkit-transition: top 2s;
-  transition: top 2s;
-}
-
-.navbar.open {
-  -webkit-animation-name: open;
-  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 0.3s;
-  /* Safari 4.0 - 8.0 */
-  animation-name: open;
-  animation-duration: 0.3s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes open {
-  0% {
-    top: -60px;
-  }
-  25% {
-    top: -40px;
-  }
-  50% {
-    top: -20px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-@keyframes open {
-  0% {
-    top: -60px;
-  }
-  25% {
-    top: -40px;
-  }
-  50% {
-    top: -20px;
-  }
-  100% {
-    top: 0px;
-  }
-}
-
-.navbar.close {
-  -webkit-animation-name: close;
-  /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 0.3s;
-  /* Safari 4.0 - 8.0 */
-  animation-name: close;
-  animation-duration: 0.3s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes close {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: -20px;
-  }
-  50% {
-    top: -40px;
-  }
-  100% {
-    top: -60px;
-  }
-}
-
-@keyframes close {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: -20px;
-  }
-  50% {
-    top: -40px;
-  }
-  100% {
-    top: -60px;
-  }
-}
-
-header {
-  padding-top: 7em;
-  padding-bottom: 5em;
-}
-
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background-size: cover;
-}
-
-header.masthead .overlay {
-  position: absolute;
-  background: #001733;
-  background: linear-gradient(308deg, #001733 0%, #315374 19%, #00dcff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001733",endColorstr="#00dcff",GradientType=1);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.3;
-}
-
-header.masthead h1 {
-  font-size: 2rem;
-}
-
-header.masthead .mx-auto {
-  padding-bottom: 2vh;
-}
-
-.form-control {
-  border: 2px solid #80bdff;
-}
-
-.form-control:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-#results {
-  color: #495057;
-  display: none;
-  padding: 0.5rem;
-  position: relative;
-  text-align: left;
-  margin: auto;
-  border: 2px solid #80bdff;
-  border-top: none;
-  border-bottom-left-radius: .3rem;
-  border-bottom-right-radius: .3rem;
-  background-color: #fff;
-  z-index: 0;
-  font-size: 1.25rem;
-}
-
-.account, .result, .account-menu, .account-menu a {
+.account, .account-menu, .account-menu a {
   color: #495057;
   background-color: #fff;
   padding: .4rem 1rem;
@@ -211,18 +69,97 @@ header.masthead .mx-auto {
   margin-right: 0.5rem;
 }
 
-.result {
-  margin-top: 0.5rem;
-}
-
-.result:hover, .account:hover, .account-menu a:hover {
+.account:hover, .account-menu a:hover {
   color: #fff;
   background-color: #007bff;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
-.result:active, .account:active {
+.account:active {
+  color: #fff;
+  background-color: #007bff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header {
+  padding-top: 7em;
+  padding-bottom: 5em;
+}
+
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background: #001733;
+  background: linear-gradient(308deg, #001733 0%, #315374 19%, #00dcff 100%);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+header.masthead .mx-auto {
+  padding-bottom: 2vh;
+}
+
+.form-control {
+  border: 2px solid #80bdff;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#results {
+  color: #495057;
+  display: none;
+  padding: 0.5rem;
+  position: relative;
+  text-align: left;
+  margin: auto;
+  border: 2px solid #80bdff;
+  border-top: none;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  background-color: #fff;
+  z-index: 0;
+  font-size: 1.25rem;
+}
+
+.result {
+  color: #495057;
+  background-color: #fff;
+  padding: .4rem 1rem;
+  border-radius: .3rem;
+  border: 2px solid #80bdff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.result {
+  margin-top: 0.5rem;
+}
+
+.result:hover {
+  color: #fff;
+  background-color: #007bff;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.result:active {
   color: #fff;
   background-color: #007bff;
   -webkit-box-shadow: none;
